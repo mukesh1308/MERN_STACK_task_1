@@ -1,0 +1,88 @@
+body{
+    background-color: #F0F8FF;
+}
+main{
+    max-width: 100rem;
+    min-height: calc(100vh - 8rem);
+    background-color: var(--bg);
+    margin: 0px auto;
+    box-shadow: 0px 0px 2px black;
+    padding: 3rem;
+}
+main section{
+    margin-bottom: 4rem;
+}
+.title{
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--accent);
+    position: relative;
+    left:-3rem;
+    margin-bottom: 2rem;
+}
+.title::after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left:100%;
+    top:0px;
+    border-bottom: 2.8rem solid transparent; 
+    border-right: 2.8rem solid transparent;           
+    border-top: 2.7rem solid transparent;           
+    border-left: 5rem solid var(--accent);
+}
+.title h1{
+    font-size: 3rem;
+    text-transform: capitalize;
+    display: inline-block;
+    color: var(--primary-text);
+    font-weight: 400;
+    padding: 1rem 5rem 1rem 3rem;
+}
+
+main p,main td{
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.skills td{
+    padding-right: 4rem;
+    padding-bottom: 0.5rem;
+}
+.skills td div{
+    width: 40rem;
+    height: 1rem;
+    background-color: black;
+    position: relative;
+    box-shadow: 0px 0px 2px black;
+}
+.skills td div::after{
+    content: "";
+    height: 100%;
+    display: inline-block;
+    width: calc(var(--i) * 100% / 100);
+    background-color: lightblue;
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+.skills tr,.skills td{
+    border-bottom: 0.1px solid rgba(128, 128, 128, 0.3);
+    border-collapse: collapse;
+}
+
+
+
+main li{
+    font-size: 2rem;
+    list-style: circle;
+}
+main li h3{
+    font-size: 2rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}

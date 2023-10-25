@@ -1,0 +1,159 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style-position: inside;
+}
+:root{
+    --bg:#ffffff;
+    --primary:#F0F8FF;
+    --secondary:#002244;
+    --accent:#3D3C42;
+    --primary-text:#ffffff;
+    --secondary-text:#000000;
+}
+html{
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+    font-size: 10px;
+}
+::-webkit-scrollbar{
+    width:0.5rem;
+    background-color: var(--secondary-text);
+}
+::-webkit-scrollbar-thumb{
+    background-color: lightblue;
+    border-radius: 2px;
+}
+
+.icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #ffffff;
+}
+h1{
+    font-family: monospace;
+}
+input[type="radio"]{
+    display: none;
+}
+
+
+/*#######################################################################
+side bar
+#######################################################################*/
+
+
+header{
+    position: sticky;
+    top:0px;
+    left: 0px;
+    z-index: 50;
+}
+
+header nav{
+    width: 100%;
+    height: 8rem;
+    background-color: var(--secondary);
+}
+
+header nav aside{
+    width: 60rem;
+    height: 100vh;
+    position: absolute;
+    top:0px;
+    left: -60rem;
+    background-color: var(--secondary);
+    color: var(--primary-text);
+    padding: 2rem;
+    transition: 0.5s;
+    overflow-y: scroll;
+}
+header nav aside>div{
+    margin-top: 2rem;
+}
+header nav aside>div h1{
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+}
+header nav aside td,header nav aside li{
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+header nav aside td{
+    padding-right: 2rem;
+}
+.profile{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.profile img{
+    height: 18rem;
+    border-radius: 0.5rem;
+}
+.profile p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.profile h1{
+    font-size: 3rem;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+aside label{
+    width: fit-content;
+    height: fit-content;
+    position: sticky;
+    top:2rem;
+    left:2rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+aside label img{
+    width: 2rem;
+    height: auto;
+    top:2rem;
+    left:2rem;
+}
+input[type="radio"]:checked+aside{
+    left:0px;
+}
+
+
+
+
+
+
+/*#######################################################################
+nav
+#######################################################################*/
+
+nav>label[for="open"]{
+    height: 100%;
+    width: fit-content;
+    margin-left: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--primary-text);
+    cursor:pointer;
+}
+
+nav>label[for="open"] img{
+    width: auto;
+    height: 80%;
+}
+
+nav>label[for="open"] h1{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
